@@ -1,3 +1,4 @@
+-- Love2d Config
 local uv = vim.uv
 print("Using: " .. uv.os_getenv("NVIM_APPNAME"))
 
@@ -25,7 +26,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
-    vim.hl.on_yank({higroup='Visual', timeout=350})
+    vim.hl.hl_op({higroup='SnippetTabstop', timeout=320})
   end,
 })
 
@@ -56,4 +57,3 @@ end)
 
 -- Enable lsps
 vim.lsp.enable("lua_ls")
--- vim.lsp.enable("ty")
