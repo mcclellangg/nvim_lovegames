@@ -1,4 +1,6 @@
-print("Using: nvim_lovegames/init.lua")
+local uv = vim.uv
+print("Using: " .. uv.os_getenv("NVIM_APPNAME"))
+
 require("config.lazy")
 
 --Enable colorschme
