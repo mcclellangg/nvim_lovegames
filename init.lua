@@ -4,6 +4,9 @@ print("Using: " .. uv.os_getenv("NVIM_APPNAME"))
 
 require("config.lazy")
 
+local uv = vim.uv
+print("Using: " .. uv.os_getenv("NVIM_APPNAME"))
+
 -- ==== GREAT Advent of Neovim ====
 vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
