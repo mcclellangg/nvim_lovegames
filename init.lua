@@ -4,9 +4,6 @@ print("Using: " .. uv.os_getenv("NVIM_APPNAME"))
 
 require("config.lazy")
 
---Enable colorschme
-vim.cmd("colorscheme miniwinter")
-
 -- ==== GREAT Advent of Neovim ====
 vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
@@ -26,7 +23,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
-    vim.hl.hl_op({higroup='SnippetTabstop', timeout=320})
+    vim.hl.on_yank({higroup='DiffText', timeout=300})
   end,
 })
 
