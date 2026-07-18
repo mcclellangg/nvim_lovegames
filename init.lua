@@ -14,7 +14,6 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 vim.keymap.set("n", "<space>nh", "<cmd>noh<CR>")
 
 -- Basic
-vim.F
 vim.opt.linebreak = true
 vim.opt.wrap = true
 vim.opt.termguicolors = true
