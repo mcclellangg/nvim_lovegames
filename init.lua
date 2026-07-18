@@ -14,6 +14,7 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 vim.keymap.set("n", "<space>nh", "<cmd>noh<CR>")
 
 -- Basic
+vim.F
 vim.opt.linebreak = true
 vim.opt.wrap = true
 vim.opt.termguicolors = true
@@ -26,7 +27,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
-    vim.hl.hl_op({higroup='DiffText', timeout=300})
+    vim.hl.on_yank({higroup='DiffText', timeout=300})
   end,
 })
 
