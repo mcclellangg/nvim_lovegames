@@ -2,5 +2,5 @@
 return {
   enabled = true,
   "mason-org/mason.nvim",
-  opts = {} 
+  opts = {}
 }
